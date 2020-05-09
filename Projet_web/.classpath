@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Tools"/>
+	<classpathentry kind="src" path="BD"/>
+	<classpathentry kind="src" path="Services"/>
+	<classpathentry kind="src" path="Servlets"/>
+	<classpathentry kind="src" path="Test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/json-org.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/json-simple-1.1.1.jar.zip"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/mongo-java-driver-3.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/servlet-api.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
