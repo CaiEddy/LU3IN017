@@ -10,6 +10,7 @@ import org.bson.Document;
 import java.util.Arrays;
 import com.mongodb.BasicDBObject;
 import com.mongodb.Block;
+import com.mongodb.DBObject;
 import com.mongodb.client.MongoCursor;
 import static com.mongodb.client.model.Filters.*;
 import com.mongodb.client.result.DeleteResult;
@@ -23,35 +24,57 @@ import BD.Static_BD;
 public class Message_tools {
 	public static int cpt=0;
 	
-	public static void addMessage(int id,String name,String text) throws Exception {
-		Document query = new Document();
-		cpt++;
-		query.append("id_msg", cpt);
-		query.append("author_id",id);
-		query.append("author_name",name);
-		query.append("date",new java.util.Date());
-		query.append("text",text);
-		Static_BD.col.insertOne(query);
-		
+	public static boolean insert_in_bd(int id,String name,String text){
+		try {
+			Document query = new Document();
+			cpt++;
+			query.append("id_msg", cpt);
+			query.append("author_id",id);
+			query.append("author_name",name);
+			query.append("date",new java.util.Date());
+			query.append("text",text);
+			Static_BD.col.insertOne(query);
+			return true;
+		}catch(Exception e){
+			return false;
+		}
 	}
 	
-	public static void getListMessage(int id_user) {
+	public static ArrayList<String> getListMessage(int id_user) {
+		MongoCursor<Document> cursor = null;
+		// arraylist pour recuper tous les messages;
+		ArrayList<String> list_message = new ArrayList<String>();
 		BasicDBObject searchQuery = new BasicDBObject();
 		searchQuery.put("author_id",id_user);
-
-		MongoCursor<Document> cursor = Static_BD.col.find(searchQuery).iterator();  
+		cursor = Static_BD.col.find(searchQuery).iterator();  
+			
 		while(cursor.hasNext()) {
-		    System.out.println(cursor.next());	    
+			DBObject obj = (DBObject) cursor.next();
+			String msg = (String) obj.get("text");
+			list_message.add(msg);
 		}
+		
+		cursor.close();
+		return list_message;
 		
 	}
 	
-	public static void deleteMessage(int id_msg) {
-		Static_BD.col.deleteOne(Filters.eq("id_msg", id_msg));
+	public static boolean deleteMessage(int id_msg) {
+		try {
+			Static_BD.col.deleteOne(Filters.eq("id_msg", id_msg));
+			return true;
+		}catch(Exception e){
+			return false;
+		}
 	}
 	
-	public static void setMessage (int id_msg,String msg) {
-		Static_BD.col.updateOne(new Document("id_msg",id_msg), new Document("$set",new Document("text",msg)));
+	public static boolean updateMessage (int id_msg,String msg) {
+		try {
+			Static_BD.col.updateOne(new Document("id_msg",id_msg), new Document("$set",new Document("text",msg)));
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
 	}
 	
 	

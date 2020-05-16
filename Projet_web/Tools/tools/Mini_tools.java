@@ -33,23 +33,24 @@ public class Mini_tools {
 	public static String attribut_requete(String requeteSQL) {
 		String resultat_attribut = "";
 		String resultat_table = "";
-		String[] z = requeteSQL.split("\\s");
+		// on separe la requete par des es
+		String[] tab_split = requeteSQL.split("\\s");
 		//on prends le/les attributs entre le Select et le From
-		for (int i=0; z[i].compareTo("From") != 0 ; i++) {
-			if(z[i].compareTo("Select") != 0) {
-				//cas si *, on chercher la/les tables entre le From et le Where, pour pouvoir accèder à tous les attributs des tables
-				if(z[i].compareTo("*") == 0) {
-					for(int j=i+1; j != z.length && (z[j].compareTo("Where") != 0 && z[j].compareTo(";") != 0); j++) {
-						if(z[j].compareTo("From") != 0 && z[j].compareTo(";") != 0 ) {
-							resultat_table = resultat_table + z[j];
+		for (int i=0; tab_split[i].compareTo("From") != 0 ; i++) {
+			if(tab_split[i].compareTo("Select") != 0) {
+				//cas si *, on chercher la/les tables entre le From et le Where, pour pouvoir acceder a tous les attributs des tables
+				if(tab_split[i].compareTo("*") == 0) {
+					for(int j=i+1; j != tab_split.length && (tab_split[j].compareTo("Where") != 0 && tab_split[j].compareTo(";") != 0); j++) {
+						if(tab_split[j].compareTo("From") != 0 && tab_split[j].compareTo(";") != 0 ) {
+							resultat_table = resultat_table + tab_split[j];
 						}
 					}
-					// on accèdes aux attributs des table avec getAttributFromTable
+					// on accedes aux attributs des table avec getAttributFromTable
 					resultat_attribut = getAttributFromTable(resultat_table);
 					return resultat_attribut;
 				}
-				//cas si != *, on prends le/les attributs entre le Select et le From
-				resultat_attribut = resultat_attribut + z[i];
+				//cas si different de  *, on prends le/les attributs entre le Select et le From
+				resultat_attribut = resultat_attribut + tab_split[i];
 			}
 		}
 		return resultat_attribut;

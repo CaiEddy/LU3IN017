@@ -1,16 +1,17 @@
 package test;
 
-import BD.Connexion_BD;
 import services.Friends_services;
+import services.Authentification_services;
 
 public class Friends_test {
 	public static void main(String[] args) throws Exception {
 		int id = 1;
 		System.out.println("JEUX DE TEST POUR TOUTE LES METHODES Friends_services\n");
 		
+
 		// login de id
-		
-		
+		//Authentification_services.login("Chako","luludu38");
+
 		// getFriendList
 		System.out.println("METHODE          : Friends_services.getFriendList(String.valueOf("+id+"))");
 		System.out.println("RESULTAT_ATTENDU : Tous les amis de l'utilisateur d'ID : "+id);

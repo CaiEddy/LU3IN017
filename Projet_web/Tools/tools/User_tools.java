@@ -1,7 +1,7 @@
 package tools;
 
 public class User_tools {
-	public static String table = "DB_users_cai_moukouri";
+	public static String table = "db_users_cai_moukouri";
 	public static String attributs = "id,login,password,prenom,nom,pseudo,mail,sexe,date_de_naissance";
 	
 	// login est dans la base de donnee

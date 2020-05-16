@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 public class Friends_tools {
-	public static String table = "DB_friends_cai_moukouri";
+	public static String table = "db_friends_cai_moukouri";
 	public static String attributs = "id1,id2,date,nb_ami_commun";
 	
 	

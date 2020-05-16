@@ -5,7 +5,6 @@ import tools.Message_tools;
 
 public class Message_test {
 	public static void main(String[] args) throws Exception {
-		
 		Message_tools.addMessage(1,"steve", "comment tu vas eddy?");
 		Message_tools.addMessage(1,"steve", "réponds bouffon");
 		Message_tools.addMessage(2,"eddy", "désolé je m'excuse");

@@ -13,4 +13,9 @@ public class ErrorJSON {
 		return obj;
 	}
 	
+	public static JSONObject serviceAccepted(String message) throws JSONException {
+		JSONObject obj = new JSONObject();
+		obj.put(message,0);
+		return obj;
+	}
 }

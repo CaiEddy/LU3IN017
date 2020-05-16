@@ -6,15 +6,19 @@ import BD.Connexion_BD;
 import tools.*;
 
 public class User_services {
-	// 1-	Verifie si argument vide/null
-	// 2- 	Verifie la connection a la BD
-	// 3-	Verifie si le token existe dans la BD
+	// 1-	Verifie si argument vide/null (si besoin)
+	// 2- 	Ouverture de la connection a la BD
+	// 3-	Verifie si le token existe dans la BD (si besoin)
+	// 4-	Test parametres (si besoin)
+	// 5-	Recupere les informations + creation/return du JSON
+	// 6-	Fermeture de la connection a la BD
 	
 	
 	public static JSONObject getUser(String id) throws Exception {
 		try {
 			// Verifie si un argument est vide ou null
 			if(Mini_tools.null_vide(id)){
+				// Message erreur si arguement vide ou null
 				return ErrorJSON.serviceRefused("argument vide/null pour la methode getUser", -1);
 			}
 			
@@ -25,7 +29,7 @@ public class User_services {
 			
 			// Verifie si le token existe
 			if(!Authentification_tools.test_token(id)){
-				// Message erreur si le token de ID est inconnu parla base de donnee
+				// Message erreur si le token de ID est inconnu par la base de donnee
 				return ErrorJSON.serviceRefused("Le TOKEN de l'ID("+id+") n'existe pas pour la methode getUser", -1);
 			}
 			
@@ -45,8 +49,6 @@ public class User_services {
 			
 			// Creation du json
 			return Mini_tools.creation_json(information, nom_attributs);
-			
-			
 		}finally {
 			// fermerture de la connection
 			Connexion_BD.close_connexion_BD();
@@ -69,8 +71,6 @@ public class User_services {
 			
 			// Creation du json
 			return Mini_tools.creation_json(information, nom_attributs);
-			
-			
 		}finally {
 			// fermerture de la connection
 			Connexion_BD.close_connexion_BD();
@@ -87,6 +87,7 @@ public class User_services {
 			   Mini_tools.null_vide(prenom) || Mini_tools.null_vide(nom) || 
 			   Mini_tools.null_vide(pseudo) || Mini_tools.null_vide(mail) || 
 			   Mini_tools.null_vide(sexe) || Mini_tools.null_vide(date_de_naissance)) {
+				// Message erreur si arguement vide ou null
 				return ErrorJSON.serviceRefused("argument vide/null pour la methode UserCreate", -1);
 			}
 			
@@ -117,8 +118,6 @@ public class User_services {
 			
 			// Creation du json
 			return Mini_tools.creation_json(information, nom_attributs);
-			
-			
 		}finally {
 			// fermerture de la connection
 			Connexion_BD.close_connexion_BD();
@@ -130,6 +129,7 @@ public class User_services {
 		try {
 			// Verifie si un argument est vide ou null
 			if(Mini_tools.null_vide(id)){
+				// Message erreur si arguement vide ou null
 				return ErrorJSON.serviceRefused("argument vide/null pour la methode deleteUser", -1);
 			}
 			
@@ -140,7 +140,7 @@ public class User_services {
 			
 			// Verifie si le token existe
 			if(!Authentification_tools.test_token(id)){
-				// Message erreur si le token de ID est inconnu parla base de donnee
+				// Message erreur si le token de ID est inconnu par la base de donnee
 				return ErrorJSON.serviceRefused("Le TOKEN de l'ID("+id+") n'existe pas pour la methode deleteUser", -1);
 			}
 			
@@ -160,13 +160,10 @@ public class User_services {
 			
 			
 			// Creation du json
-			return Mini_tools.creation_json(null, null);
-			
-			
+			return ErrorJSON.serviceAccepted("ok");
 		}finally {
 			// fermerture de la connection
 			Connexion_BD.close_connexion_BD();
 		}
-	
 	}
 }

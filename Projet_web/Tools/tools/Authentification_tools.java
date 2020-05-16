@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 
 public class Authentification_tools {
-	public static String table = "DB_authentification_cai_moukouri";
+	public static String table = "db_authentification_cai_moukouri";
 	public static String attributs = "id,token,date_debut,date_fin";
 	
 
