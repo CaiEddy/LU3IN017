@@ -1,0 +1,86 @@
+[{
+  "_id": {
+    "$oid": "5ece794e3815e43608d8867a"
+  },
+  "requetes": "http://localhost:8081/Projet_web/friends?service=deleteFriend&id1=1&id2=2"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d8867b"
+  },
+  "requetes": "http://localhost:8081/Projet_web/authentification?service=login&login=login_A&password=password_A"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d8867c"
+  },
+  "requetes": "http://localhost:8081/Projet_web/friends?service=deleteFriend&id1=1&id2=2"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d8867d"
+  },
+  "requetes": "http://localhost:8081/Projet_web/friends?service=addFriend&id1=1&id2=3"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d8867e"
+  },
+  "requetes": "http://localhost:8081/Projet_web/friends?service=addFriend&id1=1&id2=2"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d8867f"
+  },
+  "requetes": "http://localhost:8081/Projet_web/friends?service=getFriendList&id=1"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88680"
+  },
+  "requetes": "http://localhost:8081/Projet_web/message?service=addMessage&id=1&text=bonjour, vous allez bien ?"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88681"
+  },
+  "requetes": "http://localhost:8081/Projet_web/message?service=addMessage&id=1&text=Moi, je vais bien merci"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88682"
+  },
+  "requetes": "http://localhost:8081/Projet_web/message?service=listMessage&id=1"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88683"
+  },
+  "requetes": "http://localhost:8081/Projet_web/message?service=deleteMessage&id_user=1&id_msg=1"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88684"
+  },
+  "requetes": "http://localhost:8081/Projet_web/user?service=getUser&id=1"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88685"
+  },
+  "requetes": "http://localhost:8081/Projet_web/authentification?service=login&login=login_B&password=password_B"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88686"
+  },
+  "requetes": "http://localhost:8081/Projet_web/authentification?service=logout&login=login_B&password=password_B"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88687"
+  },
+  "requetes": "http://localhost:8081/Projet_web/user?service=getUserlist"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88688"
+  },
+  "requetes": "http://localhost:8081/Projet_web/user?service=createUser&login=toto&password=1234&prenom=prenom_toto&nom=nom_toto&pseudo=toto_pseudo&mail=toto@toto.fr&sexe=M&data_de_naissance=2020-05-26"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d88689"
+  },
+  "requetes": "http://localhost:8081/Projet_web/user?service=deleteUser&id=1"
+},{
+  "_id": {
+    "$oid": "5ece794e3815e43608d8868a"
+  },
+  "requetes": "http://localhost:8081/Projet_web/message?service=setMessage&id_user=1&id_msg=1&text=je modifie le message"
+}]

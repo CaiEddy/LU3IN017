@@ -10,7 +10,7 @@ public class Friends_test {
 		
 
 		// login de id
-		//Authentification_services.login("Chako","luludu38");
+		System.out.println(Authentification_services.login("login_A","password_A"));
 
 		// getFriendList
 		System.out.println("METHODE          : Friends_services.getFriendList(String.valueOf("+id+"))");

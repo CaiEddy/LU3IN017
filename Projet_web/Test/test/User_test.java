@@ -1,11 +1,15 @@
 package test;
+import services.Authentification_services;
 import services.User_services;
 
 
 public class User_test {
 
 	public static void main(String[] args) throws Exception {
-
+		// login de id
+		Authentification_services.login("login_A","password_A");
+		
+		
 		int id = 1;
 		System.out.println("JEUX DE TEST POUR TOUTE LES METHODES User_services\n");
 		// getUserlist
@@ -70,8 +74,9 @@ public class User_test {
 		System.out.println("\n\n");
 		
 		
-		id = 5;
-		
+		id = 4;
+		// login de id(4)
+		Authentification_services.login("toto_login","hello_password");
 		
 		// deleteUser
 		System.out.println("METHODE          : User_services.deleteUser(String.valueOf("+id+"))");

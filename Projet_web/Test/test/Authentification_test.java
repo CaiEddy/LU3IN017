@@ -2,8 +2,6 @@ package test;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
-import BD.Connexion_BD;
 import services.Authentification_services;
 import tools.Authentification_tools;
 import tools.Mini_tools;
@@ -12,8 +10,9 @@ import tools.User_tools;
 public class Authentification_test {
 	public static void main(String[] args) throws Exception {
 		System.out.println("JEUX DE TEST POUR TOUTE LES METHODES Authentification_services\n");
-		String login = "Chako";
-		Connexion_BD.open_connexion_BD();
+		
+		// avoir acces au login
+		String login = "login_A";
 		ArrayList<String> id_list = Mini_tools.requeteGET("Select id From "+User_tools.table+" Where login='"+login+"' ;");
 		String id = id_list.get(0);
 		

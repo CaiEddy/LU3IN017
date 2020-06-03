@@ -2,7 +2,7 @@
 
 CREATE TABLE `bd_cai_moukouri`.`DB_users_cai_moukouri` ( `id` INT NOT NULL AUTO_INCREMENT COMMENT 'id du user' , `login` VARCHAR(255) NOT NULL COMMENT 'le login choisi par le user' , `password` VARCHAR(255) NOT NULL , `prenom` VARCHAR(255) NOT NULL , `nom` VARCHAR(255) NOT NULL , `pseudo` VARCHAR(255) NOT NULL , `mail` VARCHAR(255) NOT NULL , `sexe` VARCHAR(255) NOT NULL , `date_de_naissance` DATE NOT NULL , PRIMARY KEY (`id`), UNIQUE (`login`)) ENGINE = InnoDB COMMENT = 'la table des utilisateurs';
 
-INSERT INTO `DB_users_cai_moukouri` (`id`, `login`, `password`, `prenom`, `nom`, `pseudo`, `mail`, `sexe`, `date_de_naissance`) VALUES ('1', 'Chako', 'luludu38', 'lucie', 'CUBAUD', 'Luludu95', 'luciepartoutmemedanston@upmc.ufr', 'F', '2002-02-11'), (NULL, 'Caiment', 'CaimentduBenin', 'Eddy', 'CAI', 'CaimentduMalawi', 'Cai.eddy@tjr_pas_validé_un_S1', 'H', '1995-02-28'),(NULL, 'emmnms', 'emmanuellita54648fe@//zuiydzual', 'emmanuelle', 'UPMC', 'la_pote_de_lulu_du38', 'emmanuelle@upmc.etu', 'F', '2002-02-11');
+INSERT INTO `DB_users_cai_moukouri` (`id`, `login`, `password`, `prenom`, `nom`, `pseudo`, `mail`, `sexe`, `date_de_naissance`) VALUES ('1', 'login_A', 'password_A', 'prenom_A', 'nom_A', 'pseudo_A', 'mail_A@sorbonne.fr', 'F', '1998-04-12'), (NULL, 'login_B', 'password_B', 'prenom_B', 'nom_B', 'pseudo_B', 'mail_B@sorbonne.fr', 'M', '1999-03-10'), (NULL, 'login_C', 'password_C', 'prenom_C', 'nom_C', 'pseudo_C', 'mail_C@sorbonne.fr', 'F', '2000-03-10');
 
 
 

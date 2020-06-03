@@ -13,10 +13,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/json-org.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/json-simple-1.1.1.jar.zip"/>
-	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/mongo-java-driver-3.10.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/mysql-connector-java-8.0.18.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/LU3IN017-master/package_librairie/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/Projet_WEB/package_librairie/json-org.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/Projet_WEB/package_librairie/json-simple-1.1.1.jar.zip"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/Projet_WEB/package_librairie/mongo-java-driver-3.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/Projet_WEB/package_librairie/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eddy/Desktop/Projet_WEB/package_librairie/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
